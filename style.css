@@ -23,9 +23,22 @@ body {
 	padding: 0;
 }
 
-header,
-main {
-	padding: 56px 0;
+h1,
+h2 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+p {
+	font-size: 1.25rem;
+	line-height: 1.4;
+}
+
+strong {
+	color: var(--primary);
 }
 
 header {
@@ -34,37 +47,43 @@ header {
 
 main {
 	background-color: var(--grey--light);
-}
-
-strong {
-	color: var(--primary);
+	padding: 96px 0;
 }
 
 .max-width-wrapper {
 	padding-inline: var(--padding-x);
 	margin-inline: auto;
-	max-width: 650px;
+	max-width: 800px;
 }
 
-.intro-chunk p {
-	max-width: 35ch;
+.intro-chunk {
+	padding: 96px 0 48px;
+	max-width: 400px;
+}
+
+.intro-chunk .title {
+	margin-block-end: 48px;
 }
 
 .card {
 	background-color: var(--white);
 	border-block-end: var(--border-height) solid var(--grey--medium);
-	padding: 8px var(--padding-x);
-	margin-inline: calc(-1 * var(--padding-x));
+	padding: var(--padding-x);
+	margin: calc(-1 * var(--padding-x));
+}
+
+.card p:last-child {
+	margin-block-end: 0;
 }
 
 .indented-heading {
-	--heading__padding-inline-start: calc(var(--padding-x) + 8px);
+	--heading__padding-block: 16px;
+	--heading__padding-inline: calc(var(--padding-x) + 8px);
 
 	background-color: var(--secondary--light);
 	border-block-end: var(--border-height) solid var(--secondary--dark);
 	width: fit-content;
-	padding: 16px var(--padding-x);
-	padding-inline-start: var(--heading__padding-inline-start);
-	margin-block-start: 0px;
-	margin-inline-start: calc(-1 * var(--heading__padding-inline-start));
+	padding: var(--heading__padding-block) var(--heading__padding-inline);
+	margin-inline-start: calc(-1 * var(--heading__padding-inline));
+	margin-block-start: calc(-1 * var(--heading__padding-block));
 }
