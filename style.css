@@ -8,7 +8,7 @@
 	--grey--medium: hsl(0deg, 0%, 40%);
 	--grey--light: hsl(0deg, 0%, 60%);
 	--white: hsl(0deg, 0%, 100%);
-	--padding-x: 24px;
+	--padding-inline: 24px;
 	--border-height: 8px;
 }
 
@@ -51,7 +51,7 @@ main {
 }
 
 .max-width-wrapper {
-	padding-inline: var(--padding-x);
+	padding-inline: var(--padding-inline);
 	margin-inline: auto;
 	max-width: 800px;
 }
@@ -68,8 +68,8 @@ main {
 .card {
 	background-color: var(--white);
 	border-block-end: var(--border-height) solid var(--grey--medium);
-	padding: var(--padding-x);
-	margin: calc(-1 * var(--padding-x));
+	padding: var(--padding-inline);
+	margin: calc(-1 * var(--padding-inline));
 }
 
 .card p:last-child {
@@ -78,7 +78,7 @@ main {
 
 .indented-heading {
 	--heading__padding-block: 16px;
-	--heading__padding-inline: calc(var(--padding-x) + 8px);
+	--heading__padding-inline: calc(var(--padding-inline) + 8px);
 
 	background-color: var(--secondary--light);
 	border-block-end: var(--border-height) solid var(--secondary--dark);
