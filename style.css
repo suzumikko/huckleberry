@@ -1,12 +1,70 @@
+:root {
+	--primary: hsl(160deg, 100%, 30%);
+	--secondary--light: hsl(45deg, 100%, 50%);
+	--secondary--dark: hsl(45deg, 100%, 40%);
+	--black: hsl(0deg, 0%, 0%);
+	--grey--darkest: hsl(0deg, 0%, 10%);
+	--grey--dark: hsl(0deg, 0%, 30%);
+	--grey--medium: hsl(0deg, 0%, 40%);
+	--grey--light: hsl(0deg, 0%, 60%);
+	--white: hsl(0deg, 0%, 100%);
+	--padding-x: 24px;
+	--border-height: 8px;
+}
+
 * {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-/* Add styles here! */
+header,
+main {
+	padding: 56px 0;
+}
+
+header {
+	border-block-end: var(--border-height) solid var(--grey--medium);
+}
+
+main {
+	background-color: var(--grey--light);
+}
+
+strong {
+	color: var(--primary);
+}
+
+.max-width-wrapper {
+	padding-inline: var(--padding-x);
+	margin-inline: auto;
+	max-width: 650px;
+}
+
+.intro-chunk p {
+	max-width: 35ch;
+}
+
+.card {
+	background-color: var(--white);
+	border-block-end: var(--border-height) solid var(--grey--medium);
+	padding: 8px var(--padding-x);
+	margin-inline: calc(-1 * var(--padding-x));
+}
+
+.indented-heading {
+	--heading__padding-inline-start: calc(var(--padding-x) + 8px);
+
+	background-color: var(--secondary--light);
+	border-block-end: var(--border-height) solid var(--secondary--dark);
+	width: fit-content;
+	padding: 16px var(--padding-x);
+	padding-inline-start: var(--heading__padding-inline-start);
+	margin-block-start: 0px;
+	margin-inline-start: calc(-1 * var(--heading__padding-inline-start));
+}
